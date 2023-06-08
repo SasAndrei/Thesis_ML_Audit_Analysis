@@ -1,0 +1,102 @@
+\hypertarget{result__ipynb_8py}{}\doxysection{result\+\_\+ipynb.\+py File Reference}
+\label{result__ipynb_8py}\index{result\_ipynb.py@{result\_ipynb.py}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{result__ipynb_8py_a9f46e054c83b785d1faa94eff0ffa29a}\label{result__ipynb_8py_a9f46e054c83b785d1faa94eff0ffa29a}} 
+pd {\bfseries result\+\_\+ipynb.\+train} = pd.\+read\+\_\+csv(\textquotesingle{}../input/heart-\/failure-\/clinical-\/data/heart\+\_\+failure\+\_\+clinical\+\_\+records\+\_\+dataset.\+csv\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em @dataimport \end{DoxyCompactList}\item 
+go \mbox{\hyperlink{result__ipynb_8py_a1e39f99b84accbf4f9db335258da2256}{result\+\_\+ipynb.\+fig}} = go.\+Figure()
+\begin{DoxyCompactList}\small\item\em Distribution of Age. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a7a9f8ecdf4937c7cb367233896baed0e}\label{result__ipynb_8py_a7a9f8ecdf4937c7cb367233896baed0e}} 
+str {\bfseries result\+\_\+ipynb.\+title\+\_\+text} = \char`\"{}GENDER DISTRIBUTION IN THE DATASET \textbackslash{}GENDER VS DEATH\+\_\+\+EVENT\char`\"{},
+\begin{DoxyCompactList}\small\item\em Use {\ttfamily hole} to create a donut-\/like pie chart. \end{DoxyCompactList}\item 
+pd \mbox{\hyperlink{result__ipynb_8py_a73740e354832702295804ea426429f2e}{result\+\_\+ipynb.\+x}} = train.\+iloc\mbox{[}\+:, \+:-\/1\mbox{]}
+\begin{DoxyCompactList}\small\item\em Feature Selection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_af3fd875538c6e8addf0f356702b3226a}\label{result__ipynb_8py_af3fd875538c6e8addf0f356702b3226a}} 
+Logistic\+Regression {\bfseries result\+\_\+ipynb.\+model} = Logistic\+Regression()
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+Logistic\+Regression \mbox{\hyperlink{result__ipynb_8py_a6716aeb4c28f89bca5a9c9a67b21cd4c}{result\+\_\+ipynb.\+y\+\_\+pred}} = model.\+predict(x\+\_\+test)
+\begin{DoxyCompactList}\small\item\em Fit the model. \end{DoxyCompactList}\item 
+confusion\+\_\+matrix \mbox{\hyperlink{result__ipynb_8py_abed8b18e655405dc4ac2a46b20f89d91}{result\+\_\+ipynb.\+cm}} = confusion\+\_\+matrix(y\+\_\+test, y\+\_\+pred)
+\begin{DoxyCompactList}\small\item\em Confusion Matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_af439e551fe0036623cd19aa239581029}\label{result__ipynb_8py_af439e551fe0036623cd19aa239581029}} 
+accuracy\+\_\+score {\bfseries result\+\_\+ipynb.\+acc\+\_\+logreg} = accuracy\+\_\+score(y\+\_\+test, y\+\_\+pred)
+\begin{DoxyCompactList}\small\item\em accuracy score \end{DoxyCompactList}\item 
+KNeighbors\+Classifier \mbox{\hyperlink{result__ipynb_8py_a9f91f9115ea9fac02e03c7f73bf1ce6a}{result\+\_\+ipynb.\+classifier}} = KNeighbors\+Classifier(n\+\_\+neighbors=neighbors, metric=\textquotesingle{}minkowski\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Finding the optimum number of neighbors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a415245df8eea4eeb7fd5a75386159537}\label{result__ipynb_8py_a415245df8eea4eeb7fd5a75386159537}} 
+tf {\bfseries result\+\_\+ipynb.\+ann} = tf.\+keras.\+models.\+Sequential()
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a696def288d7f8ceae91365eac9573756}\label{result__ipynb_8py_a696def288d7f8ceae91365eac9573756}} 
+accuracy\+\_\+score {\bfseries result\+\_\+ipynb.\+ac\+\_\+ann} = accuracy\+\_\+score(y\+\_\+test,y\+\_\+pred)
+\begin{DoxyCompactList}\small\item\em accuracy \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a0b7222ccf24bfd8e7c999e5ed873f572}\label{result__ipynb_8py_a0b7222ccf24bfd8e7c999e5ed873f572}} 
+pd {\bfseries result\+\_\+ipynb.\+y} = train.\+iloc\mbox{[}\+:,-\/1\mbox{]}
+\begin{DoxyCompactList}\small\item\em The processed dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{result__ipynb_8py_a9f91f9115ea9fac02e03c7f73bf1ce6a}\label{result__ipynb_8py_a9f91f9115ea9fac02e03c7f73bf1ce6a}} 
+\index{result\_ipynb.py@{result\_ipynb.py}!classifier@{classifier}}
+\index{classifier@{classifier}!result\_ipynb.py@{result\_ipynb.py}}
+\doxysubsubsection{\texorpdfstring{classifier}{classifier}}
+{\footnotesize\ttfamily Cat\+Boost\+Classifier result\+\_\+ipynb.\+classifier = KNeighbors\+Classifier(n\+\_\+neighbors=neighbors, metric=\textquotesingle{}minkowski\textquotesingle{})}
+
+
+
+Finding the optimum number of neighbors. 
+
+Finding the optimum number of n\+\_\+estimators.
+
+Finding the optimum number of max\+\_\+leaf\+\_\+nodes.
+
+@model \mbox{\Hypertarget{result__ipynb_8py_abed8b18e655405dc4ac2a46b20f89d91}\label{result__ipynb_8py_abed8b18e655405dc4ac2a46b20f89d91}} 
+\index{result\_ipynb.py@{result\_ipynb.py}!cm@{cm}}
+\index{cm@{cm}!result\_ipynb.py@{result\_ipynb.py}}
+\doxysubsubsection{\texorpdfstring{cm}{cm}}
+{\footnotesize\ttfamily confusion\+\_\+matrix result\+\_\+ipynb.\+cm = confusion\+\_\+matrix(y\+\_\+test, y\+\_\+pred)}
+
+
+
+Confusion Matrix. 
+
+confusion matrix
+
+Making the confusion matrix and calculating the accuracy score.
+
+Making the confusion matrix and calculating accuracy score. \mbox{\Hypertarget{result__ipynb_8py_a1e39f99b84accbf4f9db335258da2256}\label{result__ipynb_8py_a1e39f99b84accbf4f9db335258da2256}} 
+\index{result\_ipynb.py@{result\_ipynb.py}!fig@{fig}}
+\index{fig@{fig}!result\_ipynb.py@{result\_ipynb.py}}
+\doxysubsubsection{\texorpdfstring{fig}{fig}}
+{\footnotesize\ttfamily make\+\_\+subplots result\+\_\+ipynb.\+fig = go.\+Figure()}
+
+
+
+Distribution of Age. 
+
+Create subplots\+: use \textquotesingle{}domain\textquotesingle{} type for Pie subplot.
+
+Distribution of AGE Vs DEATH\+\_\+\+EVENT. \mbox{\Hypertarget{result__ipynb_8py_a73740e354832702295804ea426429f2e}\label{result__ipynb_8py_a73740e354832702295804ea426429f2e}} 
+\index{result\_ipynb.py@{result\_ipynb.py}!x@{x}}
+\index{x@{x}!result\_ipynb.py@{result\_ipynb.py}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily pd result\+\_\+ipynb.\+x = train.\+iloc\mbox{[}\+:, \+:-\/1\mbox{]}}
+
+
+
+Feature Selection. 
+
+The processed dataset. \mbox{\Hypertarget{result__ipynb_8py_a6716aeb4c28f89bca5a9c9a67b21cd4c}\label{result__ipynb_8py_a6716aeb4c28f89bca5a9c9a67b21cd4c}} 
+\index{result\_ipynb.py@{result\_ipynb.py}!y\_pred@{y\_pred}}
+\index{y\_pred@{y\_pred}!result\_ipynb.py@{result\_ipynb.py}}
+\doxysubsubsection{\texorpdfstring{y\_pred}{y\_pred}}
+{\footnotesize\ttfamily tf result\+\_\+ipynb.\+y\+\_\+pred = model.\+predict(x\+\_\+test)}
+
+
+
+Fit the model. 
+
+Predicting the test set results.
+
+Predicting the Test set results. 

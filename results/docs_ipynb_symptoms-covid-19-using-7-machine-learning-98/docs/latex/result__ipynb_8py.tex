@@ -1,0 +1,75 @@
+\hypertarget{result__ipynb_8py}{}\doxysection{result\+\_\+ipynb.\+py File Reference}
+\label{result__ipynb_8py}\index{result\_ipynb.py@{result\_ipynb.py}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{result__ipynb_8py_ac1f0e509dc3dcca7d77af043830dd5ed}\label{result__ipynb_8py_ac1f0e509dc3dcca7d77af043830dd5ed}} 
+pd {\bfseries result\+\_\+ipynb.\+covid} = pd.\+read\+\_\+csv(\textquotesingle{}../input/symptoms-\/and-\/covid-\/presence/Covid Dataset.\+csv\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em @dataimport \end{DoxyCompactList}\item 
+pd \mbox{\hyperlink{result__ipynb_8py_abf2dce251eabe6ef8d9248a0c80f9a78}{result\+\_\+ipynb.\+missing\+\_\+values}} = covid.\+isnull().sum()
+\begin{DoxyCompactList}\small\item\em create a table with data missing \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a96e669b349ed7e6e0d100a187c1e4ef7}\label{result__ipynb_8py_a96e669b349ed7e6e0d100a187c1e4ef7}} 
+Logistic\+Regression {\bfseries result\+\_\+ipynb.\+model} = Logistic\+Regression()
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+Logistic\+Regression \mbox{\hyperlink{result__ipynb_8py_acdc516e2750fc4ae59bc3f6c674ec743}{result\+\_\+ipynb.\+y\+\_\+pred}} = model.\+predict(x\+\_\+test)
+\begin{DoxyCompactList}\small\item\em Fit the model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_af81b3cfa14d5e1fca4008e3cefe6e7ea}\label{result__ipynb_8py_af81b3cfa14d5e1fca4008e3cefe6e7ea}} 
+Logistic\+Regression {\bfseries result\+\_\+ipynb.\+acc\+\_\+logreg} = model.\+score(x\+\_\+test, y\+\_\+test)$\ast$100
+\begin{DoxyCompactList}\small\item\em Score/\+Accuracy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_ad12a3690924047862c624f9b17cea080}\label{result__ipynb_8py_ad12a3690924047862c624f9b17cea080}} 
+Logistic\+Regression {\bfseries result\+\_\+ipynb.\+acc\+\_\+randomforest} = model.\+score(x\+\_\+test, y\+\_\+test)$\ast$100
+\begin{DoxyCompactList}\small\item\em Score/\+Accuracy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a4d0e2281eb01b5ece7351a7f3bfbbb44}\label{result__ipynb_8py_a4d0e2281eb01b5ece7351a7f3bfbbb44}} 
+Gradient\+Boosting\+Regressor {\bfseries result\+\_\+ipynb.\+GBR} = Gradient\+Boosting\+Regressor(n\+\_\+estimators=100, max\+\_\+depth=4)
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_ac03494f3863768ffeb0252bd4a4b438c}\label{result__ipynb_8py_ac03494f3863768ffeb0252bd4a4b438c}} 
+Gradient\+Boosting\+Regressor {\bfseries result\+\_\+ipynb.\+acc\+\_\+gbk} = GBR.\+score(x\+\_\+test, y\+\_\+test)$\ast$100
+\begin{DoxyCompactList}\small\item\em Fit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a41b977a1877a54b6a6d31b3eeecdfda8}\label{result__ipynb_8py_a41b977a1877a54b6a6d31b3eeecdfda8}} 
+KNeighbors\+Classifier {\bfseries result\+\_\+ipynb.\+knn} = KNeighbors\+Classifier(n\+\_\+neighbors=20)
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a43348564436ac8287108ae159bf401f2}\label{result__ipynb_8py_a43348564436ac8287108ae159bf401f2}} 
+KNeighbors\+Classifier {\bfseries result\+\_\+ipynb.\+acc\+\_\+knn} = knn.\+score(x\+\_\+test, y\+\_\+test)$\ast$100
+\begin{DoxyCompactList}\small\item\em Score/\+Accuracy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_ad9b313341d663eb4b41288860762f93d}\label{result__ipynb_8py_ad9b313341d663eb4b41288860762f93d}} 
+tree {\bfseries result\+\_\+ipynb.\+t} = tree.\+Decision\+Tree\+Classifier()
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_acedf9407f61de3949043b47c6648e3c8}\label{result__ipynb_8py_acedf9407f61de3949043b47c6648e3c8}} 
+tree {\bfseries result\+\_\+ipynb.\+acc\+\_\+decisiontree} = t.\+score(x\+\_\+test, y\+\_\+test)$\ast$100
+\begin{DoxyCompactList}\small\item\em Score/\+Accuracy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a0115c5efad9898d34af20e80506752d1}\label{result__ipynb_8py_a0115c5efad9898d34af20e80506752d1}} 
+Logistic\+Regression {\bfseries result\+\_\+ipynb.\+acc\+\_\+gaussian} = model.\+score(x\+\_\+test, y\+\_\+test)$\ast$100
+\begin{DoxyCompactList}\small\item\em Score/\+Accuracy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_ae997927b81972aa1739d2b0b78a13995}\label{result__ipynb_8py_ae997927b81972aa1739d2b0b78a13995}} 
+svm {\bfseries result\+\_\+ipynb.\+clf} = svm.\+SVC(kernel=\textquotesingle{}linear\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_ab0d082c38cb32a4a2dad6f43c0e70b1a}\label{result__ipynb_8py_ab0d082c38cb32a4a2dad6f43c0e70b1a}} 
+svm {\bfseries result\+\_\+ipynb.\+acc\+\_\+svc} = clf.\+score(x\+\_\+test, y\+\_\+test)$\ast$100
+\begin{DoxyCompactList}\small\item\em Score/\+Accuracy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a7079729b9f581c4b051a572842b4afad}\label{result__ipynb_8py_a7079729b9f581c4b051a572842b4afad}} 
+pd {\bfseries result\+\_\+ipynb.\+percent\+\_\+missing} = covid.\+isnull().sum()/covid.\+shape\mbox{[}0\mbox{]}$\ast$100
+\begin{DoxyCompactList}\small\item\em The processed dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{result__ipynb_8py_abf2dce251eabe6ef8d9248a0c80f9a78}\label{result__ipynb_8py_abf2dce251eabe6ef8d9248a0c80f9a78}} 
+\index{result\_ipynb.py@{result\_ipynb.py}!missing\_values@{missing\_values}}
+\index{missing\_values@{missing\_values}!result\_ipynb.py@{result\_ipynb.py}}
+\doxysubsubsection{\texorpdfstring{missing\_values}{missing\_values}}
+{\footnotesize\ttfamily pd result\+\_\+ipynb.\+missing\+\_\+values = covid.\+isnull().sum()}
+
+
+
+create a table with data missing 
+
+The processed dataset. \mbox{\Hypertarget{result__ipynb_8py_acdc516e2750fc4ae59bc3f6c674ec743}\label{result__ipynb_8py_acdc516e2750fc4ae59bc3f6c674ec743}} 
+\index{result\_ipynb.py@{result\_ipynb.py}!y\_pred@{y\_pred}}
+\index{y\_pred@{y\_pred}!result\_ipynb.py@{result\_ipynb.py}}
+\doxysubsubsection{\texorpdfstring{y\_pred}{y\_pred}}
+{\footnotesize\ttfamily svm result\+\_\+ipynb.\+y\+\_\+pred = model.\+predict(x\+\_\+test)}
+
+
+
+Fit the model. 
+
+Predict the response for test dataset. 

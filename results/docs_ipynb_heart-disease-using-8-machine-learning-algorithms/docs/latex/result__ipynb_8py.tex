@@ -1,0 +1,35 @@
+\hypertarget{result__ipynb_8py}{}\doxysection{result\+\_\+ipynb.\+py File Reference}
+\label{result__ipynb_8py}\index{result\_ipynb.py@{result\_ipynb.py}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{result__ipynb_8py_aaa920003932350a467f51e8cc6dd4df7}\label{result__ipynb_8py_aaa920003932350a467f51e8cc6dd4df7}} 
+pd {\bfseries result\+\_\+ipynb.\+heart} = pd.\+read\+\_\+csv(\textquotesingle{}../input/heart-\/disease-\/uci/heart.\+csv\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em @dataimport \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a96e669b349ed7e6e0d100a187c1e4ef7}\label{result__ipynb_8py_a96e669b349ed7e6e0d100a187c1e4ef7}} 
+linear\+\_\+model {\bfseries result\+\_\+ipynb.\+model} = linear\+\_\+model.\+Linear\+Regression()
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a4d0e2281eb01b5ece7351a7f3bfbbb44}\label{result__ipynb_8py_a4d0e2281eb01b5ece7351a7f3bfbbb44}} 
+Gradient\+Boosting\+Regressor {\bfseries result\+\_\+ipynb.\+GBR} = Gradient\+Boosting\+Regressor(n\+\_\+estimators=100, max\+\_\+depth=4)
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a41b977a1877a54b6a6d31b3eeecdfda8}\label{result__ipynb_8py_a41b977a1877a54b6a6d31b3eeecdfda8}} 
+KNeighbors\+Classifier {\bfseries result\+\_\+ipynb.\+knn} = KNeighbors\+Classifier(n\+\_\+neighbors=20)
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_ad9b313341d663eb4b41288860762f93d}\label{result__ipynb_8py_ad9b313341d663eb4b41288860762f93d}} 
+tree {\bfseries result\+\_\+ipynb.\+t} = tree.\+Decision\+Tree\+Classifier()
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_afe1476aa75ae3864e8efcd55c647e8d3}\label{result__ipynb_8py_afe1476aa75ae3864e8efcd55c647e8d3}} 
+xgb {\bfseries result\+\_\+ipynb.\+xg\+\_\+reg} = xgb.\+XGBRegressor(objective =\textquotesingle{}reg\+:linear\textquotesingle{}, colsample\+\_\+bytree = 0.\+3, learning\+\_\+rate = 0.\+1,max\+\_\+depth = 5, alpha = 10, n\+\_\+estimators = 10)
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_ae997927b81972aa1739d2b0b78a13995}\label{result__ipynb_8py_ae997927b81972aa1739d2b0b78a13995}} 
+svm {\bfseries result\+\_\+ipynb.\+clf} = svm.\+SVC(kernel=\textquotesingle{}linear\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em @model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a6c9228a4435d405d7895a74dce8c26cc}\label{result__ipynb_8py_a6c9228a4435d405d7895a74dce8c26cc}} 
+svm {\bfseries result\+\_\+ipynb.\+y\+\_\+pred} = clf.\+predict(x\+\_\+test)
+\begin{DoxyCompactList}\small\item\em Predict the response for test dataset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_af9ddd0bb9db794786d1adb90a224ae48}\label{result__ipynb_8py_af9ddd0bb9db794786d1adb90a224ae48}} 
+pd {\bfseries result\+\_\+ipynb.\+x} = heart.\+drop(\textquotesingle{}target\textquotesingle{},axis=1)
+\begin{DoxyCompactList}\small\item\em The processed dataset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{result__ipynb_8py_a0b7222ccf24bfd8e7c999e5ed873f572}\label{result__ipynb_8py_a0b7222ccf24bfd8e7c999e5ed873f572}} 
+pd {\bfseries result\+\_\+ipynb.\+y} = heart.\+target
+\begin{DoxyCompactList}\small\item\em The processed dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}

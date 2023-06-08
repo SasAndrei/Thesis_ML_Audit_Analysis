@@ -1,0 +1,73 @@
+\hypertarget{_models_LogisticRegression}{}\doxysection{Model is Logistic\+Regression}\label{_models_LogisticRegression}
+model~\newline
+ model = Logistic\+Regression()~\newline
+ model.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ y\+\_\+pred = model.\+predict(x\+\_\+test)~\newline
+ cm = confusion\+\_\+matrix(y\+\_\+test, y\+\_\+pred)~\newline
+ acc\+\_\+logreg = accuracy\+\_\+score(y\+\_\+test, y\+\_\+pred)~\newline
+ list1.\+append(accuracy\+\_\+score(y\+\_\+test,y\+\_\+pred))~\newline
+\hypertarget{_models_KNeighborsClassifier}{}\doxysection{Model is KNeighbors\+Classifier}\label{_models_KNeighborsClassifier}
+classifier~\newline
+ classifier = KNeighbors\+Classifier(n\+\_\+neighbors=5)~\newline
+ classifier.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ y\+\_\+pred = classifier.\+predict(x\+\_\+test)~\newline
+ cm = confusion\+\_\+matrix(y\+\_\+test, y\+\_\+pred)~\newline
+ acc\+\_\+knn = accuracy\+\_\+score(y\+\_\+test, y\+\_\+pred)~\newline
+ classifier = SVC(C = c, random\+\_\+state=0, kernel = \textquotesingle{}rbf\textquotesingle{})~\newline
+ classifier.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ y\+\_\+pred = classifier.\+predict(x\+\_\+test)~\newline
+ list1.\+append(accuracy\+\_\+score(y\+\_\+test,y\+\_\+pred))~\newline
+\hypertarget{_models_SVC}{}\doxysection{Model is SVC}\label{_models_SVC}
+classifier~\newline
+ classifier = SVC(C = 0.\+7, random\+\_\+state=0, kernel = \textquotesingle{}rbf\textquotesingle{})~\newline
+ classifier.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ y\+\_\+pred = classifier.\+predict(x\+\_\+test)~\newline
+ cm = confusion\+\_\+matrix(y\+\_\+test, y\+\_\+pred)~\newline
+ acc\+\_\+svc = accuracy\+\_\+score(y\+\_\+test, y\+\_\+pred)~\newline
+ classifier = Decision\+Tree\+Classifier(max\+\_\+leaf\+\_\+nodes = leaves, random\+\_\+state=0, criterion=\textquotesingle{}entropy\textquotesingle{})~\newline
+ classifier.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ y\+\_\+pred = classifier.\+predict(x\+\_\+test)~\newline
+ list1.\+append(accuracy\+\_\+score(y\+\_\+test,y\+\_\+pred))~\newline
+\hypertarget{_models_DecisionTreeClassifier}{}\doxysection{Model is Decision\+Tree\+Classifier}\label{_models_DecisionTreeClassifier}
+classifier~\newline
+ classifier = Decision\+Tree\+Classifier(max\+\_\+leaf\+\_\+nodes = 10, random\+\_\+state=0, criterion=\textquotesingle{}entropy\textquotesingle{})~\newline
+ classifier.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ y\+\_\+pred = classifier.\+predict(x\+\_\+test)~\newline
+ cm = confusion\+\_\+matrix(y\+\_\+test, y\+\_\+pred)~\newline
+ acc\+\_\+decisiontree = accuracy\+\_\+score(y\+\_\+test, y\+\_\+pred)~\newline
+\hypertarget{_models_RandomForestClassifier}{}\doxysection{Model is Random\+Forest\+Classifier}\label{_models_RandomForestClassifier}
+classifier~\newline
+ classifier = Random\+Forest\+Classifier(n\+\_\+estimators = 15, criterion=\textquotesingle{}entropy\textquotesingle{}, random\+\_\+state=0)~\newline
+ classifier.\+fit(x\+\_\+train,y\+\_\+train)~\newline
+ y\+\_\+pred = classifier.\+predict(x\+\_\+test)~\newline
+ cm = confusion\+\_\+matrix(y\+\_\+test, y\+\_\+pred)~\newline
+ acc\+\_\+randomforest = accuracy\+\_\+score(y\+\_\+test, y\+\_\+pred)~\newline
+\hypertarget{_models_Sequential}{}\doxysection{Model is Sequential}\label{_models_Sequential}
+ann~\newline
+ ann = tf.\+keras.\+models.\+Sequential()~\newline
+ ann.\+add(tf.\+keras.\+layers.\+Dense(units = 7, activation = \textquotesingle{}relu\textquotesingle{}))~\newline
+ ann.\+add(tf.\+keras.\+layers.\+Dense(units = 7, activation = \textquotesingle{}relu\textquotesingle{}))~\newline
+ ann.\+add(tf.\+keras.\+layers.\+Dense(units = 7, activation = \textquotesingle{}relu\textquotesingle{}))~\newline
+ ann.\+add(tf.\+keras.\+layers.\+Dense(units = 7, activation = \textquotesingle{}relu\textquotesingle{}))~\newline
+ ann.\+add(tf.\+keras.\+layers.\+Dense(units = 1, activation = \textquotesingle{}sigmoid\textquotesingle{}))~\newline
+ ann.\+compile(optimizer = \textquotesingle{}adam\textquotesingle{}, loss = \textquotesingle{}binary\+\_\+crossentropy\textquotesingle{} , metrics = \mbox{[}\textquotesingle{}accuracy\textquotesingle{}\mbox{]} )~\newline
+ ann.\+fit(x\+\_\+train, y\+\_\+train, batch\+\_\+size = 16, epochs = 100)~\newline
+ y\+\_\+pred = ann.\+predict(x\+\_\+test)~\newline
+ Making the confusion matrix, calculating accuracy\+\_\+score ~\newline
+ cm = confusion\+\_\+matrix(y\+\_\+test,y\+\_\+pred)~\newline
+ ac\+\_\+ann = accuracy\+\_\+score(y\+\_\+test,y\+\_\+pred)~\newline
+ list1.\+append(accuracy\+\_\+score(y\+\_\+test,y\+\_\+pred))~\newline
+\hypertarget{_models_XGBClassifier}{}\doxysection{Model is XGBClassifier}\label{_models_XGBClassifier}
+classifier~\newline
+ classifier = XGBClassifier(n\+\_\+estimators = 10, max\+\_\+depth=12, subsample=0.\+7)~\newline
+ classifier.\+fit(x\+\_\+train,y\+\_\+train)~\newline
+ y\+\_\+pred = classifier.\+predict(x\+\_\+test)~\newline
+ cm = confusion\+\_\+matrix(y\+\_\+test, y\+\_\+pred)~\newline
+ ac\+\_\+xgboost = accuracy\+\_\+score(y\+\_\+test, y\+\_\+pred)~\newline
+\hypertarget{_models_CatBoostClassifier}{}\doxysection{Model is Cat\+Boost\+Classifier}\label{_models_CatBoostClassifier}
+classifier~\newline
+ classifier = Cat\+Boost\+Classifier()~\newline
+ classifier.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ y\+\_\+pred = classifier.\+predict(x\+\_\+test)~\newline
+ cm = confusion\+\_\+matrix(y\+\_\+test, y\+\_\+pred)~\newline
+ ac\+\_\+catboost = accuracy\+\_\+score(y\+\_\+test, y\+\_\+pred)~\newline

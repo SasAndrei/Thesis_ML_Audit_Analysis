@@ -1,0 +1,75 @@
+@page Audit_Sheet Audit Sheet
+
+Standardized templates to report results for the assessment processes developed
+by WG-DAISAM. In this version the, template comprises three elements: Data
+Specification Sheet, ML Model Specification Sheet and ML Model Summary
+Findings.
+
+@section Data_Specification_Sheet Data Specification Sheet
+Data Source:
+Data Acquisition/ Sensing Modality:
+Data Acquisition / Sensing Device Type:
+Data Collection Place:
+Data Collection Period:
+Data Collection Author(s) / Agency:
+Data Collection Funding Agency:
+Data Sampling Rate:
+Data Update Version:
+Data Dimension:
+Data Sample Size:
+Data Type:
+Data Resolution / Precision:
+Data Privacy / De-identification Protocol:
+Data Safety & Security Protocol:
+Data Assumptions/:
+Constraints/Dependencies:
+Data Exclusion Criteria:
+Data Acceptance-Standards Compliance:
+Data Pre-processing Technique(s):
+Data Annotation Process / Tool:
+Data Bias & Variance Minimization:
+Technique:
+Train:
+Tuning(validation):
+Test:
+(evaluation) Dataset Partitioning Ratio:
+Data Registry URL:
+
+@section ML_Model_Specification_Sheet ML Model Specification Sheet
+Model Name:
+Model Version:
+Model Task:
+Model Target User Group:
+Model Target Patient Group:
+ModelAlgorithm Type:
+Model Output Type:
+Model Evaluation Metric(s):
+Model Optimal PerformanceConfiguration:
+Model Assumptions/:
+Constraints/Dependencies:
+Model Development Toolkit:
+Model Developer:
+Model Development Period:
+Model Registry URL:
+Model License:
+
+@section ML_Model_Summary_Findings ML Model Summary Findings
+Context Applicability:
+Clinical Implications:
+Benefits:
+Clinical Integration Costs:
+Response Time / Latency:
+Efficiency:
+Assumptions:
+Harms:
+Side-effects:
+Safety Implication:
+Risks:
+Value proposition / Strengths:
+Weaknesses/ Limitations:
+Generalisability:
+User Rating (scale):
+Tradeoffs:
+Caveats:
+Recommendations:
+Extensibility to other settings:

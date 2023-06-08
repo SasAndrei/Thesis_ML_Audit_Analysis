@@ -1,0 +1,51 @@
+\hypertarget{_models_LinearRegression}{}\doxysection{Model is Linear\+Regression}\label{_models_LinearRegression}
+model~\newline
+ model = linear\+\_\+model.\+Linear\+Regression()~\newline
+ model.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ print(\char`\"{}\+Accuracy -\/-\/$>$ \char`\"{}, model.\+score(x\+\_\+test, y\+\_\+test)$\ast$100)~\newline
+\hypertarget{_models_LogisticRegression}{}\doxysection{Model is Logistic\+Regression}\label{_models_LogisticRegression}
+model~\newline
+ model = Logistic\+Regression()~\newline
+ model.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ y\+\_\+pred = model.\+predict(x\+\_\+test)~\newline
+ print(\char`\"{}\+Accuracy -\/-\/$>$ \char`\"{}, model.\+score(x\+\_\+test, y\+\_\+test)$\ast$100)~\newline
+\hypertarget{_models_RandomForestRegressor}{}\doxysection{Model is Random\+Forest\+Regressor}\label{_models_RandomForestRegressor}
+model~\newline
+ model = Random\+Forest\+Regressor(n\+\_\+estimators=1000)~\newline
+ model.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ print(\char`\"{}\+Accuracy -\/-\/$>$ \char`\"{}, model.\+score(x\+\_\+test, y\+\_\+test)$\ast$100)~\newline
+\hypertarget{_models_GradientBoostingRegressor}{}\doxysection{Model is Gradient\+Boosting\+Regressor}\label{_models_GradientBoostingRegressor}
+GBR~\newline
+ GBR = Gradient\+Boosting\+Regressor(n\+\_\+estimators=100, max\+\_\+depth=4)~\newline
+ GBR.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ print(\char`\"{}\+Accuracy -\/-\/$>$ \char`\"{}, GBR.\+score(x\+\_\+test, y\+\_\+test)$\ast$100)~\newline
+\hypertarget{_models_KNeighborsClassifier}{}\doxysection{Model is KNeighbors\+Classifier}\label{_models_KNeighborsClassifier}
+knn~\newline
+ knn = KNeighbors\+Classifier(n\+\_\+neighbors=20)~\newline
+ knn.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ y\+\_\+pred = knn.\+predict(x\+\_\+test)~\newline
+ print(\char`\"{}\+Accuracy -\/-\/$>$ \char`\"{}, knn.\+score(x\+\_\+test, y\+\_\+test)$\ast$100)~\newline
+\hypertarget{_models_DecisionTreeClassifier}{}\doxysection{Model is Decision\+Tree\+Classifier}\label{_models_DecisionTreeClassifier}
+t~\newline
+ t = tree.\+Decision\+Tree\+Classifier()~\newline
+ t.\+fit(x\+\_\+train,y\+\_\+train)~\newline
+ y\+\_\+pred = t.\+predict(x\+\_\+test)~\newline
+ print(\char`\"{}\+Accuracy -\/-\/$>$ \char`\"{}, t.\+score(x\+\_\+test, y\+\_\+test)$\ast$100)~\newline
+\hypertarget{_models_XGBRegressor}{}\doxysection{Model is XGBRegressor}\label{_models_XGBRegressor}
+xg\+\_\+reg~\newline
+ xg\+\_\+reg = xgb.\+XGBRegressor(objective =\textquotesingle{}reg\+:linear\textquotesingle{}, colsample\+\_\+bytree = 0.\+3, learning\+\_\+rate = 0.\+1,~\newline
+ xg\+\_\+reg.\+fit(x\+\_\+train,y\+\_\+train)~\newline
+ preds = xg\+\_\+reg.\+predict(x\+\_\+test)~\newline
+ print(\char`\"{}\+Accuracy -\/-\/$>$ \char`\"{}, xg\+\_\+reg.\+score(x\+\_\+test, y\+\_\+test)$\ast$100)~\newline
+ print(\char`\"{}\+Accuracy -\/-\/$>$ \char`\"{}, xg\+\_\+reg.\+score(x\+\_\+test, y\+\_\+test)$\ast$100)~\newline
+\hypertarget{_models_GaussianNB}{}\doxysection{Model is Gaussian\+NB}\label{_models_GaussianNB}
+model~\newline
+ model = Gaussian\+NB()~\newline
+ model.\+fit(x\+\_\+train,y\+\_\+train)~\newline
+ print(\char`\"{}\+Accuracy -\/-\/$>$ \char`\"{}, model.\+score(x\+\_\+test, y\+\_\+test)$\ast$100)~\newline
+\hypertarget{_models_SVC}{}\doxysection{Model is SVC}\label{_models_SVC}
+clf~\newline
+ clf = svm.\+SVC(kernel=\textquotesingle{}linear\textquotesingle{}) \# Linear Kernel~\newline
+ clf.\+fit(x\+\_\+train, y\+\_\+train)~\newline
+ y\+\_\+pred = clf.\+predict(x\+\_\+test)~\newline
+ print(\char`\"{}\+Accuracy -\/-\/$>$ \char`\"{}, clf.\+score(x\+\_\+test, y\+\_\+test)$\ast$100)~\newline

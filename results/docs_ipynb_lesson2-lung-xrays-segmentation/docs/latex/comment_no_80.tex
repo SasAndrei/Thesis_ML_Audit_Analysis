@@ -1,0 +1,29 @@
+Intro to deep learning for medical imaging by \href{https://www.md.ai}{\texttt{ MD.\+ai}} Lesson 2.
+
+Lung X-\/\+Rays Semantic Segmentation This lesson applies a \href{https://arxiv.org/abs/1505.04597}{\texttt{ U-\/\+Net for Semantic Segmentation}} of the lung fields on chest x-\/rays. The MD.\+ai annotator is used to view the DICOM images, and to create the image level annotation. The MD.\+ai python client library is then used to download images and annotations, prepare the datasets, then are then used to train the model for classification.
+\begin{DoxyItemize}
+\item MD.\+ai annotator project URL\+: \href{https://public.md.ai/annotator/project/aGq4k6NW}{\texttt{ https\+://public.\+md.\+ai/annotator/project/a\+Gq4k6\+NW}}
+\item MD.\+ai python client libray URL\+: \href{https://github.com/mdai/mdai-client-py}{\texttt{ https\+://github.\+com/mdai/mdai-\/client-\/py}}
+\item MD.\+ai documentation URL\+: \href{https://docs.md.ai}{\texttt{ https\+://docs.\+md.\+ai}} The original public dataset is found \href{https://ceb.nlm.nih.gov/repositories/tuberculosis-chest-x-ray-image-data-sets/}{\texttt{ here}}. This tutorial and use of this public dataset is for education purpose only. Note that any publications resulting from the use of this data must attribute the data to National Library of Medicine, National Institutes of Health, Bethesda, MD, USA, and cite this article\+: \href{https://lhncbc.nlm.nih.gov/publication/pub9356}{\texttt{ https\+://lhncbc.\+nlm.\+nih.\+gov/publication/pub9356}} ~\newline
+ For further information regarding the dataset, see \href{https://openi.nlm.nih.gov/faq.php}{\texttt{ this faq}}. {\bfseries{Intro to deep learning for medical imaging \href{https://github.com/mdai/ml-lessons}{\texttt{ lessons}} by MD.\+ai}} \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \#   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Git\+Hub   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ MD.\+ai   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Colab    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \#   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Git\+Hub   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ MD.\+ai   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Colab    }\\\cline{1-5}
+\endhead
+1   &Classification of chest vs. adominal X-\/rays using Tensor\+Flow/\+Keras   &\href{https://github.com/mdai/ml-lessons/blob/master/lesson1-xray-images-classification.ipynb}{\texttt{ Link}}   &\href{https://public.md.ai/annotator/project/PVq9raBJ}{\texttt{ Link}}   &\href{https://colab.research.google.com/github/mdai/ml-lessons/blob/master/lesson1-xray-images-classification.ipynb}{\texttt{ }}    \\\cline{1-5}
+2   &Lung X-\/\+Rays Semantic Segmentation using U-\/\+Nets   &\href{https://github.com/mdai/ml-lessons/blob/master/lesson2-lung-xrays-segmentation.ipynb}{\texttt{ Link}}   &\href{https://public.md.ai/annotator/project/aGq4k6NW}{\texttt{ Link}}   &\href{https://colab.research.google.com/github/mdai/ml-lessons/blob/master/lesson2-lung-xrays-segmentation.ipynb}{\texttt{ }}    \\\cline{1-5}
+3a   &RSNA Pneumonia detection using Kaggle data format   &\href{https://github.com/mdai/ml-lessons/blob/master/lesson3-rsna-pneumonia-detection-kaggle.ipynb}{\texttt{ Link}}   &\href{https://public.md.ai/annotator/project/LxR6zdR2}{\texttt{ Link}}   &\href{https://colab.research.google.com/github/mdai/ml-lessons/blob/master/lesson3-rsna-pneumonia-detection-kaggle.ipynb}{\texttt{ }}    \\\cline{1-5}
+3b   &RSNA Pneumonia detection using the MD.\+ai python client library   &\href{https://github.com/mdai/ml-lessons/blob/master/lesson3-rsna-pneumonia-detection-mdai-client-lib.ipynb}{\texttt{ Link}}   &\href{https://public.md.ai/annotator/project/LxR6zdR2}{\texttt{ Link}}   &\href{https://colab.research.google.com/github/mdai/ml-lessons/blob/master/lesson3-rsna-pneumonia-detection-mdai-client-lib.ipynb}{\texttt{ }}   \\\cline{1-5}
+\end{longtabu}
+{\itshape Copyright 2018-\/2020 MD.\+ai, Inc. ~\newline
+ Licensed under the Apache License, Version 2.\+0}
+\end{DoxyItemize}
+
+\href{https://colab.research.google.com/github/mdai/ml-lessons/blob/master/lesson2-lung-xrays-segmentation.ipynb}{\texttt{ }}
+
+{\bfseries{Clink the badge above to launch this notebook on Google Colab.}} To use GPU, go to Runtime -\/\texorpdfstring{$>$}{>} Change runtime type -\/\texorpdfstring{$>$}{>} switch to Python 3, and turn on GPU. 

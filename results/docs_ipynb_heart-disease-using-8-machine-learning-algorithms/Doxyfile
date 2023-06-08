@@ -1,0 +1,11 @@
+PROJECT_NAME = "heart-disease-using-8-machine-learning-algorithms.ipynb"
+PROJECT_NUMBER = "1.0"
+OUTPUT_DIRECTORY = "docs"
+INPUT = result_ipynb.py
+GENERATE_LATEX = YES
+LATEX_OUTPUT = latex
+LATEX_CMD_NAME = pdflatex
+EXTRACT_ALL = NO
+FILTER_SOURCE_FILES = YES
+OPTIMIZE_OUTPUT_JAVA = YES
+HIDE_UNDOC_MEMBERS = YES

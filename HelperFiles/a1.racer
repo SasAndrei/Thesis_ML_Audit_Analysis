@@ -1,0 +1,90 @@
+(full-reset)
+;https://www.auditingalgorithms.net/
+;https://www.auditingalgorithms.net/audit-helper-tool.html
+
+; --------------------------------
+; A3 data preparation
+; --------------------------------
+
+(implies DataAcquisitionMethod)
+
+(implies lackingValues DataQualityShortcoming)
+(implies erroneousEntries DataQualityShortcoming)
+(implies inaccurateEntries DataQualityShortcoming)
+(implies lackingDatasets DataQualityShortcoming)
+(implies obsoleteEntries DataQualityShortcoming)
+(implies inconsistentEntries DataQualityShortcoming)
+
+(instance transposedLetters inaccurateEntries)
+
+(implies SQL DataManagementFramework)
+(implies NoSql DataManagementFramework)
+(implies KnowledgeGraph DataManagementFramework)
+(instance Neptun KnowledgeGraph)
+
+(instance ISO8000 DataManagementStandard)
+
+; preprocess data step
+ 
+;more about ISO800 data quality https://www.iso.org/obp/ui/#iso:std:iso:8000:-1:ed-1:v1:en
+;audit report
+;  22745-30 compliant data requirements
+; data shall be encoded using concept identifiers from an ISO 22745
+; data shall be provided in ISO 22745-40 compliant Extensible Markup Language
+
+; --------------------------------
+; A4 Modelling
+; --------------------------------
+
+(implies DataAnalysisMethod (some hasSelectionCriteria Criteria))
+
+(implies FrequentPatternMining DataAnalysisMethod)
+(implies FrequentPatternMining DataAnalysisMethod)
+(implies AssociationMining FrequentPatternMining)
+
+(implies Classification DataAnalysisMethod)
+(implies DecisionTree ClassificationMethod)
+
+(implies TrainingDataset (and Dataset (some hasQuality Quality) (some hasUpdateMethod Method)))
+
+; --------------------------------
+; A5 Evaluation
+; --------------------------------
+
+
+; --------------------------------
+; A6 Deployment and opetation
+; --------------------------------
+(implies EvidenceA1 Evidence)
+(implies EvidenceA2 Evidence)
+(implies EvidenceA3 Evidence)
+(implies EvidenceA4 Evidence)
+(implies EvidenceA5 Evidence)
+(implies EvidenceA6 Evidence)
+
+(implies DescriptionOperationalProcess EvidenceA6)
+(implies SystemArchitecture EvidenceA6)
+(implies InterfaceSpecifications EvidenceA6)
+(implies KeyPerformanceIndicators EvidenceA6)
+(implies ContingencyFramework EvidenceA6)
+
+
+
+; --------------------------------
+; A7 Management process
+; --------------------------------
+
+(evaluate (format t "Which are the subclasses of DataQualityShortcoming"))
+(concept-children DataQualityShortcoming)
+
+ (concept-instances DataQualityShortcoming)
+
+ (concept-instances Evidence6)
+ 
+ ;Print Evidences that are missing (Classes of type evidence that are empty/not instantiated  (i.e. with no individuals)
+ ; TO DO
+(evaluate (retrieve-concept-instances 'Evidence (current-abox) (all-individuals)))
+
+
+
+
